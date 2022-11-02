@@ -122,6 +122,8 @@ org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapt
 
    > 1 处获取的到LocaleContext对象，由上可知是在 RequestContextFilter拦截器里进行设置的。但是在处理Spring在处理实现时，DispatcherServlet会重写2的buildLocaleContext方法，通过Spring内建的`LocaleResolver`接口重新创建一个新的LocaleContext放在Holder中。等的模板处理完后，又恢复上一个previousLocaleContext设置在Holder中
 
+   ​
+
 
 
 #### 理解 Locale 如何在 View Render 中配合使用，需要模板引擎来整合
